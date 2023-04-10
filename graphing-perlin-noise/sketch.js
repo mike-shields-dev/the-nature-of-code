@@ -2,7 +2,7 @@ let range = 0.01;
 let rangeSlider;
 let travel = 0.01;
 let travelSlider;
-let gain = 1;
+let gain = 0.5;
 let gainSlider;
 let start = 0;
 
@@ -11,7 +11,7 @@ function setup() {
   rangeSlider.min = 0;
   rangeSlider.max = 1;
   rangeSlider.step = 0.0001;
-  rangeSlider.value = 0.01;
+  rangeSlider.value = range;
 
   rangeSlider.addEventListener('input', e => {
     range = +e.target.value
@@ -21,7 +21,7 @@ function setup() {
   travelSlider.min = 0;
   travelSlider.max = 1;
   travelSlider.step = 0.001;
-  travelSlider.value = 0.01;
+  travelSlider.value = travel;
 
   travelSlider.addEventListener('input', e => {
     travel = +e.target.value
@@ -31,7 +31,7 @@ function setup() {
   gainSlider.min = 0;
   gainSlider.max = 1;
   gainSlider.step = 0.0001;
-  gainSlider.value = 1;
+  gainSlider.value = gain;
 
   gainSlider.addEventListener('input', e => {
     gain = +e.target.value;
